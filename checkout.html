@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="StyleSheets/checkout.css" />
+    <link rel="stylesheet" href="StyleSheets/Header.css" />
+    <link rel="stylesheet" href="StyleSheets/Footer.css" />
+    <link rel="stylesheet" href="StyleSheets/responsive.css" />
+    <link
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <script
+      language="javascript"
+      type="text/javascript"
+      src="TextFiles/Header.txt"
+    ></script>
+
+    <section id="cart">
+      <h1>Checkout</h1>
+      <div class="cart-container">
+        <div class="left-side">
+          <p>Total Items: <span id="number-of-item">0</span></p>
+          <div class="cart-items" id="cart-item-container"></div>
+        </div>
+        <div class="right-side">
+          <div class="total-amount">
+            <h2>Total Amount</h2>
+            <p>Total Amount: Rs <span id="total-amount">0</span></p>
+            <a href="orderConfirm.html">
+              <button id="place-order">Place Order</button>
+            </a>
+            <button id="clear-cart">Clear Cart</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      function navSlide() {
+        var burger = document.querySelector(".burger");
+        var nav = document.querySelector(".nav-links");
+
+        burger.addEventListener("click", function () {
+          nav.classList.toggle("nav-active");
+          burger.classList.toggle("toggle");
+        });
+      }
+      navSlide();
+    </script>
+
+    <script
+      language="javascript"
+      type="text/javascript"
+      src="TextFiles/Footer.txt"
+    ></script>
+    <script src="JavaScript/checkout_cart.js"></script>
+  </body>
+</html>
